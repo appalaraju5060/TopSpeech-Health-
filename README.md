@@ -3,8 +3,11 @@
 > Built for the TopSpeech Health engineer assignment, May 2026.
 > A working PWA for one day of speech-therapy practice (the R sound).
 
-**Live demo:** _add Vercel URL after deploy_
-**Source:** _this repo_
+**Live demo:** [top-speech-health.vercel.app](https://top-speech-health.vercel.app)
+**Source:** [github.com/appalaraju5060/TopSpeech-Health-](https://github.com/appalaraju5060/TopSpeech-Health-)
+
+> Built mobile-first. Open on your phone, then "Add to Home Screen" to install
+> as a PWA — full-screen, offline-capable, native-feeling.
 
 ---
 
