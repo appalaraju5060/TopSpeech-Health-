@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Sun } from 'lucide-react'
 import { useLesson } from '../lib/lessonState.jsx'
+import VoiceCoachButton from './VoiceCoachButton.jsx'
 
 // First impression. Calm, low-pressure. No streak counter, no ambient noise.
 // The copy is intentionally soft — "you're safe to try here" — because adults
@@ -55,16 +56,19 @@ export default function StartScreen() {
         </motion.div>
       </motion.div>
 
-      <motion.button
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, type: 'spring', stiffness: 130, damping: 18 }}
-        whileTap={{ scale: 0.97 }}
-        onClick={begin}
-        className="w-full py-4 rounded-2xl bg-sage text-cream font-display font-semibold text-lg shadow-soft focus:outline-none focus:ring-4 focus:ring-sage/40"
-      >
-        Begin
-      </motion.button>
+      <div>
+        <motion.button
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, type: 'spring', stiffness: 130, damping: 18 }}
+          whileTap={{ scale: 0.97 }}
+          onClick={begin}
+          className="w-full py-4 rounded-2xl bg-sage text-cream font-display font-semibold text-lg shadow-soft focus:outline-none focus:ring-4 focus:ring-sage/40"
+        >
+          Begin
+        </motion.button>
+        <VoiceCoachButton />
+      </div>
     </div>
   )
 }
