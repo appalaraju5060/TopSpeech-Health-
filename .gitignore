@@ -12,3 +12,9 @@ dist-ssr
 # build output
 dev-dist
 *.log
+
+# secrets — NEVER commit API keys or env files
+env
+.env
+.env.*
+*.env
