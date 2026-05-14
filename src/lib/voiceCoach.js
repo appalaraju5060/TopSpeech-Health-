@@ -17,12 +17,18 @@
 //     guides — never tells the user they were "wrong." Same emotional grammar
 //     as the rest of the app, just delivered through a richer voice.
 
-import { RetellWebClient } from 'retell-client-js-sdk'
+// Retell SDK is heavy (~500KB). We dynamic-import it only when the user
+// actually taps "Talk to Coach" — the main lesson loads with zero Retell
+// weight. This keeps Lighthouse performance scores high and respects users
+// on slow mobile connections.
 
 let client = null
 
-function getClient() {
-  if (!client) client = new RetellWebClient()
+async function getClient() {
+  if (!client) {
+    const { RetellWebClient } = await import('retell-client-js-sdk')
+    client = new RetellWebClient()
+  }
   return client
 }
 
@@ -47,7 +53,8 @@ export async function startVoiceCoach({ onStart, onEnd, onError } = {}) {
   }
 
   // 2. Open the real-time voice session via Retell's Web SDK.
-  const c = getClient()
+  //    (Awaited so the dynamic import resolves before we wire listeners.)
+  const c = await getClient()
 
   // Wire events ONCE — re-binding on each call leaks listeners.
   c.removeAllListeners?.()
@@ -64,7 +71,10 @@ export async function startVoiceCoach({ onStart, onEnd, onError } = {}) {
 }
 
 export function stopVoiceCoach() {
-  try { getClient().stopCall() } catch { /* ignore */ }
+  // If the SDK never loaded (user never tapped the button), there's nothing
+  // to stop — no need to import the heavy SDK just to no-op.
+  if (!client) return
+  try { client.stopCall() } catch { /* ignore */ }
 }
 
 export function isVoiceCoachSupported() {
