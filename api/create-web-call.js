@@ -13,8 +13,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const apiKey  = process.env.RETELL_API_KEY
-  const agentId = process.env.RETELL_AGENT_ID
+  // Support both common naming conventions for the env vars so users who
+  // copy-paste from different Retell tutorials don't get tripped up.
+  const apiKey  = process.env.RETELL_API_KEY  || process.env.retellai_api
+  const agentId = process.env.RETELL_AGENT_ID || process.env.retellai_agent_id
 
   if (!apiKey || !agentId) {
     // Graceful: don't leak which env var is missing
