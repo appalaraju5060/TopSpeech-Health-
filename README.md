@@ -21,6 +21,32 @@ micro-moment of shame from the learning loop.
 
 That principle, more than any single feature, is what I wanted to defend.
 
+## Aligned with TopSpeech's mission
+
+TopSpeech Health says it directly: *"Only 1–2 out of 10 people complete speech
+therapy. The gap was never willpower. It was always access. Built for the other
+8."* The Rollr Academy translates decades of board-certified SLP practice into a
+self-paced digital pathway because the in-clinic version is unreachable for most
+adults — cost, geography, time, embarrassment.
+
+Every design decision in this prototype serves the **other 8**:
+
+- **No willpower required.** The lesson is short, the loop is forgiving, and missed
+  days never punish the user. If completion is the goal, the product cannot be
+  another source of friction.
+- **Self-monitoring as a transferable skill.** The user learns to hear themselves,
+  so therapy keeps working after the app is closed — the only way progress
+  survives outside daily check-ins.
+- **Calm clinical credibility, not gamification.** Adults working on a
+  vulnerability don't need a cartoon mascot. They need to feel that this is a
+  real therapeutic tool that treats them as an adult.
+- **PWA so it works anywhere.** Cheap phone, slow connection, no app-store gate.
+  Access is the thesis — distribution is part of access.
+
+The Premium tier (Retell voice coach, SLP clinician dashboard, multi-phoneme
+curriculum) is where clinical depth lives. Free tier exists so the other 8
+*start* — premium tier funds the depth that helps them *finish*.
+
 ---
 
 ## What I kept from Duolingo
