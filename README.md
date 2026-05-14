@@ -134,6 +134,32 @@ src/
 
 ---
 
+## Premium tier — where this goes commercially
+
+What ships here is the **free tier** — built around the self-monitoring
+loop that respects the user's autonomy. The commercial path is a Pro
+tier that adds clinical-grade depth *on top of* the free experience,
+never replacing it:
+
+- **Real-time voice analysis** via **Retell AI** — not as a judgment
+  layer (the app still never tells the user they were "wrong"), but as
+  week-over-week progress visualization the user can play back to
+  themselves. Self-monitoring with longitudinal evidence.
+- **Clinician dashboard** — Speech-Language Pathologists review the
+  per-word self-rating data from Card 4 asynchronously, shaping the
+  next session without needing to be in the room.
+- **Multi-phoneme curriculum** — beyond R, every speech sound that
+  rhotacism, lisping, and articulation programs target. The card
+  framework is already content-agnostic; the lesson data swaps cleanly.
+- **Family progress reports** — for parents of children in therapy,
+  with explicit user consent and shareable secure links.
+
+Pro tier funds the free tier. Daily speech practice stays accessible
+to anyone who needs it; clinical-grade depth pays the bills. That's
+the business model, deliberately not a feature checklist.
+
+---
+
 ## What I'd do with more time
 
 - **Real audio with waveform comparison** — let the user record themselves and
