@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="112" fill="#88A096"/>
+  <!-- soft inner shadow ring -->
+  <rect x="16" y="16" width="480" height="480" rx="100" stroke="#FBF8F3" stroke-opacity="0.18" stroke-width="2"/>
+  <!-- monogram -->
+  <text
+    x="256" y="296"
+    text-anchor="middle"
+    font-family="Fraunces, Georgia, serif"
+    font-size="240"
+    font-weight="600"
+    fill="#FBF8F3"
+    letter-spacing="-8"
+  >TS</text>
+  <!-- small sage leaf accent under monogram -->
+  <path d="M 226 360 Q 256 348 286 360 Q 256 372 226 360 Z" fill="#FBF8F3" fill-opacity="0.4"/>
+</svg>
